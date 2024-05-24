@@ -6,19 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.1.3/simple-lightbox.min.css" />
   </head>
   <body>
-    <load ="partials/header.html" />
+    <main>
+      <section class="search-section">
+        <div class="container">
+          <form class="search-form js-search-form" name="serchImageForm">
+            <div class="input-group mb-3">
+              <input
+                class="form-control js-search-input"
+                type="text"
+                name="searchKeyword"
+                placeholder="Search images"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Start
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
 
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
-
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
+      <section class="gallery">
+        <div class="container">
+          <ul class="gallery-list js-gallery"></ul>
+          <button class="js-load-more is-hidden load-more">Load more</button>
+          <div class="loader js-loader is-hidden"></div>
+        </div>
+      </section>
+    </main>
 
     <script type="module" src="./main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.1.3/simple-lightbox.min.js"></script>
   </body>
 </html>
